@@ -1,4 +1,4 @@
-# mintty-librate
+# mintty-liberate
 
 I built this proxy DLL, because on Windows (10) all the git-bash windows stick together on the taskbar. You can move them as a group, but not individual windows, which also means you can't re-order your windows on the taskbar.
 
@@ -15,7 +15,6 @@ The DLL masquerades as `winmm.dll` and proxies all API calls to the real system 
 * From the VEH, it generates a random UUID.
 * It hijacks `GetProcAddress` to intercept `SetCurrentProcessExplicitAppUserModelID`.
 * It calls `SetCurrentProcessExplicitAppUserModelID` immediately with the random UUID to decouple the window from the group.
-
 
 
 ## Prerequisites
@@ -49,14 +48,12 @@ Create a new shortcut with the following properties:
 * **Target:**
 ```text
 "C:\Program Files\Git\usr\bin\mintty.exe" -e /usr/bin/env.exe MSYSTEM=MINGW64 /usr/bin/bash.exe --login
-
 ```
 
 
 * **Start in:**
 ```text
 %HOMEDRIVE%%HOMEPATH%
-
 ```
 
 ### 4. Update Context Menu ("Git Bash Here")
