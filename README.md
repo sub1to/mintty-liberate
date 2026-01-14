@@ -4,7 +4,7 @@ I built this proxy DLL, because on Windows (10) all the git-bash windows stick t
 
 This behavior is caused by all instances of `mintty` sharing the same `AppID`. This project forces unique IDs for every instance, allowing them to be managed individually.
 
-![Alt text](img/example.png)
+![Example Image](img/example.png)
 
 ## How it Works
 
@@ -32,7 +32,7 @@ This solution requires you to bypass the standard `git-bash.exe` wrapper and lau
 ### 1. Build the Project
 
 1. Run `build.bat`.
-2. Navigate to `.projects/vs2022` and open `mintty_librate.sln`.
+2. Navigate to `.projects/vs2022` and open `mintty_liberate.sln`.
 3. Build the **Release** version.
 
 ### 2. Install the DLL
