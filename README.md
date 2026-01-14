@@ -4,6 +4,8 @@ I built this proxy DLL, because on Windows (10) all the git-bash windows stick t
 
 This behavior is caused by all instances of `mintty` sharing the same `AppID`. This project forces unique IDs for every instance, allowing them to be managed individually.
 
+![Alt text](img/example.png)
+
 ## How it Works
 
 The DLL masquerades as `winmm.dll` and proxies all API calls to the real system `winmm.dll`.
